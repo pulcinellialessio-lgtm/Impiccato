@@ -1,4 +1,8 @@
-﻿namespace Impiccato
+﻿using System;
+using System.Numerics;
+using System.Runtime.ConstrainedExecution;
+
+namespace Impiccato
 {
     internal class Program
     {
@@ -19,9 +23,9 @@
         }
         static void Main(string[] args)
         {
-            string[] facili = {"cane", "casa", "amico", "pane", "orizzonte", "biscotto"};
-            string[] medie = { "aiuola", "corteo", "tanfo", "acquitrino", "vorace", "canaglia" };
-            string[] difficili = { "Hippopotomonstrosesquipedaliofobia", "supercalifragilistichespiralitoso", "obbiettivo", "entusiasmo", "contesto", "priorita" };
+            string[] cibiFacile = {"Pane", "Mela", "Riso", "Uva", "Pera", "Sale", "Vino"};
+            string[] cibiMedio = { "Banana", "Carota", "Patata", "Fragola", "Limone", "Biscotto", "Cipolla", "Zucchina", "Pizzetta", "Panino"};
+            string[] cibiDifficili = { "Melanzana", "Pomodoro", "Marmellata", "Prezzemolo", "Stracciatella", "Cioccolato", "Tagliatelle", "Pistacchio", "Finocchio", "Melograno" };
 
             int vita = 6;
             Console.WriteLine("-----------------------------");
@@ -34,8 +38,9 @@
 
             if(scelta == 1)
             {
-                facile(facili);
+                facile(cibiFacile, vita);
             }
+            
         }
     }
 }
