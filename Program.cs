@@ -104,7 +104,7 @@
             string[] sportDifficili = { "Pallamano", "Hockey su ghiaccio", "Curling", "Scherma", "Equitazione", "Tiro con arco", "Lotta" };
 
             char[] lettere = new char[30];
-            int vita = 10, scelta;
+            int vita = 10, scelta, punti = 0;
             bool rigiocare = false;
 
             while (rigiocare == false)
@@ -195,11 +195,15 @@
                     rigiocare = false;
                     vita = 10;
                     lettere = new char[30];
+                    punti++;
                 }
                 else
                 {
                     rigiocare = true;
+                    punti++;
                 }
+
+                Console.WriteLine("Hai totalizzato " + punti + " punti!");
             }
         }
     }
